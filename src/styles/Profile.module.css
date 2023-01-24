@@ -127,6 +127,7 @@
 
 .adjectiveDiv{
     display: flex;
+    margin-bottom: 50px;
 }
 
 .adjectiveName{
@@ -200,6 +201,8 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: scroll;
+        width: 100%;
+        position: relative;
     }
     
     .endorsedDiv{
@@ -226,7 +229,4 @@
         margin: 0;
     }
 
-    .adjectiveDiv{
-        margin-bottom: 50px;
-    }
 }
