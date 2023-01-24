@@ -1,0 +1,106 @@
+.navParent{
+    color: white;
+    padding: 3% 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navParent h1{
+    margin: 0;
+}
+
+.searchInputDiv{
+    margin-left: auto;
+    position: relative;
+}
+
+.searchInputDivSearching{
+    margin-left: auto;
+    position: relative;
+    background-color: #464542;
+    border-radius: 8px;
+}
+
+.searchIconDiv{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.searchInput{
+    background-color: white;
+    width: 280px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.traitsParentDiv{
+    overflow-y: auto;
+    background-color: #464542;
+    position: absolute;
+    width: 100%;
+}
+
+.traitsSearchResultsDiv{
+    border: white 1px solid;
+    overflow-y: auto;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.traitsTitle{
+    color: white;
+}
+
+
+.traitsMainDiv{
+    border-bottom:  white 1px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NameAndProgressBarMain{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.NameAndProgressBarMain p {
+    margin: 0;
+}
+
+.progressBarParent{
+    background-color: white;
+    height: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.progressBarChild{
+    background-color: #00b2ff;
+    height: 5px;
+}
+
+
+@media (max-width: 600px) {
+    
+.searchInput{
+    width: 140px;
+    height: 30px;
+    transition: all 1s;
+}
+
+.searchInput:focus{
+    width: 200px;
+}
+
+.searchInputDiv:focus-within{
+    margin-left: 0;
+}
+.navParent:focus-within{
+    padding: 3% 3%;
+
+}
+
+}

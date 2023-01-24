@@ -1,0 +1,232 @@
+.profileParent{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.profileMain{
+    display: flex;
+    flex-direction: row;
+    padding: 0 8%;
+}
+
+.profileCircle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.leftBarMain{
+    width: 33%;
+}
+
+.leftBarName{
+    display: none;
+    color: white
+}
+
+.leftBarURL{
+    display: none;
+    color: white
+}
+
+.leftBarDescription{
+    color: white;
+    width: 75%;
+}
+
+.rightBarMain{
+    width: 77%;
+    padding-left: 15%;
+}
+
+.rightBarName{
+    color: white;
+    margin: 0;
+}
+
+.rightBarURL{
+    color: white
+}
+
+.summaryTableMain{
+
+}
+
+.summaryTableHeader{
+    color: black;
+    background-color: white;
+    height: 35px;
+    font-weight: 600;
+    margin: 0;
+    padding: 1% 2%;
+}
+
+.rowMain{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 2%;
+    border: 1px white solid;
+    font-family: 'Roboto mono';
+}
+
+.rowTitle{
+    margin: 0;
+    color: white;
+}
+
+.valueDiv{
+    display: flex;
+    margin-left: auto;
+}
+
+.highlighted{
+    color: white;
+    margin: 0;
+}
+
+.unHighlighted{
+    margin: 0;
+    color: #6c6c6e;
+}
+
+.endorsedHeader{
+    color: white;
+}
+
+.endorsedMain{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.endorsedDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 17%;
+    text-align: center;
+    border: white 1px solid;
+    margin: 1%;
+}
+
+.endorsedCircle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.endorsedName{
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+.adjectiveDiv{
+    display: flex;
+}
+
+.adjectiveName{
+    color: white;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+
+    .profileMain{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .leftBarMain{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    .leftBarName{
+        display: flex;
+        color: white
+    }
+
+    .leftBarDescription{
+        margin: 10%;
+    }
+    
+    .leftBarURL{
+        display: flex;
+        color: white;
+        margin: 0;
+    }
+    
+    
+    .rightBarMain{
+        width: 90%;
+        padding-left: 0;
+        align-self: center;
+    }
+
+    .rightBarName{
+        display: none;
+    }
+    
+    .rightBarURL{
+        display: none;
+    }
+
+    .rowTitle{
+        font-size: 10px;
+    }
+    
+    .highlighted{
+        font-size: 10px;
+    }
+    
+    .unHighlighted{
+        font-size: 10px;
+    }
+
+    .endorsedHeader{
+        color: white;
+    }
+    
+    .endorsedMain{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    
+    .endorsedDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        text-align: center;
+        border: white 1px solid;
+        margin: 1%;
+    }
+    
+    .endorsedCircle{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 10px;
+    }
+    
+    .endorsedName{
+        color: white;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .adjectiveDiv{
+        margin-bottom: 50px;
+    }
+}
