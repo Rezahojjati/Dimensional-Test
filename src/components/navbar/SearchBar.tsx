@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import useFetch from "../../api/hooks/useFetch";
 import { Traits } from "../../models/models";
 import styles from "../../styles/Navbar.module.css";
@@ -15,11 +15,11 @@ function SearchBar(props: any) {
     url: `https://us-central1-dimensional-test-9f5ab.cloudfunctions.net/app/traits`,
   }); ///fetching
 
-  useEffect(() => {
+  useMemo(() => {
     if (traitsResult.result) {
       setTraits(traitsResult.result);
     }
-  }, [traitsResult]); ///setting fetched
+  }, [traitsResult.result]); ///setting fetched
 
   function handleSearch(query: string) {
     setSearch(query);

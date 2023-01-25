@@ -25,7 +25,7 @@ function UserProfilePage(props: any) {
         peronalSummariesResult.result["summaryTableRows"]
       );
     }
-  }, [location.state, peronalSummariesResult.result]);
+  }, [peronalSummariesResult.result]);
 
   return (
     <div className={styles.profileParent}>
