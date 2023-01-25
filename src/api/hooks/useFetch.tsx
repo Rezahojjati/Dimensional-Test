@@ -15,6 +15,9 @@ function useFetch(props: FetchProps) {
     axios
       .get(props.url, {
         signal: controller.signal,
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
       .then((response) => {
         setResults(response.data);
