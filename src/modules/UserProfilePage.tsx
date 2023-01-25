@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import useFetch from "../api/hooks/useFetch";
 import Navbar from "../components/navbar/Navbar";
@@ -18,14 +18,14 @@ function UserProfilePage(props: any) {
     url: `https://us-central1-dimensional-test-9f5ab.cloudfunctions.net/app/personalitySummaries/${location.state.id}`,
   });
 
-  useEffect(() => {
+  useMemo(() => {
     setUserData(location.state);
     if (peronalSummariesResult.result) {
       setPersonalitySummaries(
         peronalSummariesResult.result["summaryTableRows"]
       );
     }
-  }, [peronalSummariesResult]);
+  }, [location.state, peronalSummariesResult.result]);
 
   return (
     <div className={styles.profileParent}>

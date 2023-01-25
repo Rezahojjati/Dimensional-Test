@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import useFetch from "../../api/hooks/useFetch";
 import { Traits } from "../../models/models";
 import styles from "../../styles/Navbar.module.css";
@@ -34,14 +34,14 @@ function SearchBar(props: any) {
   } ///filtering
   ////this runs as O(n) since toLowerCase() and includes() are both O(1)
 
-  useEffect(() => {
+  useMemo(() => {
     if (search && search?.length > 0) {
       setIsSearching(true);
     } else {
       setIsSearching(false);
       setTraitsSearchResults([]);
     }
-  }, [search]); ///for styling and resetting results
+  }, [search]); ///for styling and resetting results-Using useMemo here for optimization
 
   return (
     <div

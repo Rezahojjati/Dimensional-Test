@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import useFetch from "../api/hooks/useFetch";
 import { fetchResults, userProfileModel } from "../models/models";
 import { useNavigate } from "react-router-dom";
