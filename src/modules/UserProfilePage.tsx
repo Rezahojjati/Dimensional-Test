@@ -19,9 +19,7 @@ function UserProfilePage(props: any) {
   });
 
   useEffect(() => {
-    // console.log(location.state);
     setUserData(location.state);
-    console.log(location.state);
     if (peronalSummariesResult.result) {
       setPersonalitySummaries(
         peronalSummariesResult.result["summaryTableRows"]

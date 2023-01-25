@@ -32,6 +32,7 @@ function SearchBar(props: any) {
 
     setTraitsSearchResults(resultArray);
   } ///filtering
+  ////this runs as O(n) since toLowerCase() and includes() are both O(1)
 
   useEffect(() => {
     if (search && search?.length > 0) {
@@ -40,7 +41,7 @@ function SearchBar(props: any) {
       setIsSearching(false);
       setTraitsSearchResults([]);
     }
-  }, [search]); ///for mobile and resetting results
+  }, [search]); ///for styling and resetting results
 
   return (
     <div
@@ -50,9 +51,6 @@ function SearchBar(props: any) {
           : styles.searchInputDiv
       }
     >
-      {/* <span className={styles.searchIconDiv}>
-          <SearchIcon />
-        </span> */}
       <input
         onChange={(e) => {
           handleSearch(e.target.value);
